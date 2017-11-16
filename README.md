@@ -1,27 +1,35 @@
 # docker-compose-nifi-cluster
+
 A Docker Compose files to compose a NiFi cluster on Docker.
 
-The master branch uses the latest NiFi version (1.0).
+The master branch uses the latest NiFi version (1.0.0)
+
+- [1.0](https://github.com/truocphamkhac/docker-compose-nifi-cluster/tree/master): NiFi version 1.0.0
+
+For newer version, use following branches:
+
+- [1.4.0](https://github.com/truocphamkhac/docker-compose-nifi-cluster/tree/1.4.0): NiFi Cluster version 1.4.0
+
 For older version, use following branches:
 
 - [0.x](https://github.com/ijokarumawak/docker-compose-nifi-cluster/tree/0.x): NCM and 2 nodes cluster.
 
-## Prerequisite
+## PREREQUISITE
 
 You need docker, docker-machine and docker-compose. For example, in my environment I have these versions.
 
 ```Shell
 $ docker -v
-Docker version 1.12.1, build 6f9534c
+Docker version 17.09.0-ce, build afdb6d4
 
 $ docker-machine -v
-docker-machine version 0.8.1, build 41b3b25
+docker-machine version 0.12.2, build 9371605
 
 $ docker-compose -v
-docker-compose version 1.8.0, build f3628c7
+docker-compose version 1.16.1, build 6d1ac21
 ```
 
-## How to use
+## HOW TO USE
 
 ```Shell
 # Clone this repository
@@ -56,10 +64,10 @@ $ docker-compose down
 $ docker-compose build
 ```
 
-## Special thanks
+## BASE DOCKER IMAGE
 
-I used [mkobit/nifi](https://github.com/mkobit/docker-nifi) as a base image. Thanks for sharing the image and maintaining it up to date!
+I used [apache/nifi](https://hub.docker.com/r/apache/nifi/) 1.4.0 as a base image.
 
-## Screen shot
+## NIFI CLUSTER SAMPLE
 
 ![connected-node](https://raw.githubusercontent.com/ijokarumawak/docker-compose-nifi-cluster/master/images/connected-nodes.png)
